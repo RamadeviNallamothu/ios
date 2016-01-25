@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		68E84E456B3CDCA7AFB54440 /* Pods_Spec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A688B9661C840756BF656C89 /* Pods_Spec.framework */; };
 		AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792F11C56A4A800886254 /* AppDelegate.swift */; };
-		AE4792F41C56A4A800886254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792F31C56A4A800886254 /* ViewController.swift */; };
 		AE4792F71C56A4A800886254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792F51C56A4A800886254 /* Main.storyboard */; };
 		AE4792F91C56A4A800886254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4792F81C56A4A800886254 /* Assets.xcassets */; };
 		AE4792FC1C56A4A800886254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792FA1C56A4A800886254 /* LaunchScreen.storyboard */; };
+		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
+		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
+		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
+		AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */; };
+		AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */; };
+		AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */; };
+		AEFE5FD41C56D56300814E5C /* MockRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */; };
+		AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */; };
+		AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD81C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift */; };
+		AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +39,22 @@
 		A688B9661C840756BF656C89 /* Pods_Spec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4792EE1C56A4A800886254 /* brighton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brighton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4792F11C56A4A800886254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE4792F31C56A4A800886254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE4792F61C56A4A800886254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE4792F81C56A4A800886254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4792FB1C56A4A800886254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE4792FD1C56A4A800886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE4793211C56AB2600886254 /* Spec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4793251C56AB2600886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerSpec.swift; path = Controllers/LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryProtocol.swift; sourceTree = "<group>"; };
+		AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestFactory.swift; sourceTree = "<group>"; };
+		AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		AEFE5FD81C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactorySpec.swift; sourceTree = "<group>"; };
 		C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spec.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spec/Pods-Spec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,8 +117,10 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEFE5FD51C56DB0100814E5C /* Sessions */,
+				AEFE5FCC1C56D32F00814E5C /* Factories */,
+				AEFE5FC31C56B1F600814E5C /* Controllers */,
 				AE4792F11C56A4A800886254 /* AppDelegate.swift */,
-				AE4792F31C56A4A800886254 /* ViewController.swift */,
 				AE4792F51C56A4A800886254 /* Main.storyboard */,
 				AE4792F81C56A4A800886254 /* Assets.xcassets */,
 				AE4792FA1C56A4A800886254 /* LaunchScreen.storyboard */,
@@ -112,9 +132,64 @@
 		AE4793221C56AB2600886254 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				AEFE5FDA1C57DED400814E5C /* Factories */,
+				AEFE5FD21C56D52A00814E5C /* Controllers */,
+				AEFE5FD11C56D51600814E5C /* MockFactories */,
 				AE4793251C56AB2600886254 /* Info.plist */,
+				AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */,
+				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
 			);
 			path = Spec;
+			sourceTree = "<group>";
+		};
+		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */,
+				AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AEFE5FCC1C56D32F00814E5C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */,
+				AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		AEFE5FD11C56D51600814E5C /* MockFactories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */,
+			);
+			path = MockFactories;
+			sourceTree = "<group>";
+		};
+		AEFE5FD21C56D52A00814E5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AEFE5FD51C56DB0100814E5C /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */,
+				AEFE5FD81C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		AEFE5FDA1C57DED400814E5C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE4792F41C56A4A800886254 /* ViewController.swift in Sources */,
+				AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */,
+				AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */,
+				AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */,
+				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
+				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
+				AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */,
 				AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */,
+				AEFE5FD41C56D56300814E5C /* MockRequestFactory.swift in Sources */,
+				AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */,
+				AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +415,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -375,6 +460,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -396,6 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://brighton-dev.cfapps.io";
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = brighton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.brighton;
@@ -407,6 +495,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://brighton-prod.cfapps.io";
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = brighton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.brighton;
@@ -419,10 +509,12 @@
 			baseConfigurationReference = 72EE263C9BB518BEB74A32B2 /* Pods-Spec.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.Spec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brighton.app/brighton";
 			};
 			name = Debug;
@@ -432,6 +524,7 @@
 			baseConfigurationReference = C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.Spec;
