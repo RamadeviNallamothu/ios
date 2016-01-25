@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68E84E456B3CDCA7AFB54440 /* Pods_Spec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A688B9661C840756BF656C89 /* Pods_Spec.framework */; };
 		AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792F11C56A4A800886254 /* AppDelegate.swift */; };
 		AE4792F41C56A4A800886254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792F31C56A4A800886254 /* ViewController.swift */; };
 		AE4792F71C56A4A800886254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792F51C56A4A800886254 /* Main.storyboard */; };
@@ -14,7 +15,19 @@
 		AE4792FC1C56A4A800886254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792FA1C56A4A800886254 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE4793261C56AB2600886254 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE4792E61C56A4A800886254 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE4792ED1C56A4A800886254;
+			remoteInfo = brighton;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		72EE263C9BB518BEB74A32B2 /* Pods-Spec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spec/Pods-Spec.debug.xcconfig"; sourceTree = "<group>"; };
+		A688B9661C840756BF656C89 /* Pods_Spec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4792EE1C56A4A800886254 /* brighton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brighton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4792F11C56A4A800886254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE4792F31C56A4A800886254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,9 @@
 		AE4792F81C56A4A800886254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4792FB1C56A4A800886254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE4792FD1C56A4A800886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE4793211C56AB2600886254 /* Spec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4793251C56AB2600886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spec.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spec/Pods-Spec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,14 +48,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE47931E1C56AB2600886254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E84E456B3CDCA7AFB54440 /* Pods_Spec.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644A0F807AB2E5528315B500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A688B9661C840756BF656C89 /* Pods_Spec.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5513F4CAC55EB66B8C68340 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72EE263C9BB518BEB74A32B2 /* Pods-Spec.debug.xcconfig */,
+				C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE4792E51C56A4A800886254 = {
 			isa = PBXGroup;
 			children = (
 				AE4792F01C56A4A800886254 /* brighton */,
+				AE4793221C56AB2600886254 /* Spec */,
 				AE4792EF1C56A4A800886254 /* Products */,
+				A5513F4CAC55EB66B8C68340 /* Pods */,
+				644A0F807AB2E5528315B500 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				AE4792EE1C56A4A800886254 /* brighton.app */,
+				AE4793211C56AB2600886254 /* Spec.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +107,14 @@
 				AE4792FD1C56A4A800886254 /* Info.plist */,
 			);
 			path = brighton;
+			sourceTree = "<group>";
+		};
+		AE4793221C56AB2600886254 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				AE4793251C56AB2600886254 /* Info.plist */,
+			);
+			path = Spec;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +137,27 @@
 			productReference = AE4792EE1C56A4A800886254 /* brighton.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AE4793201C56AB2600886254 /* Spec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE47932A1C56AB2600886254 /* Build configuration list for PBXNativeTarget "Spec" */;
+			buildPhases = (
+				72163A75C20BDACC06239539 /* Check Pods Manifest.lock */,
+				AE47931D1C56AB2600886254 /* Sources */,
+				AE47931E1C56AB2600886254 /* Frameworks */,
+				AE47931F1C56AB2600886254 /* Resources */,
+				DF66569CE051B3C6945BE59E /* Embed Pods Frameworks */,
+				57DD30AFFCE1306AA10D7756 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE4793271C56AB2600886254 /* PBXTargetDependency */,
+			);
+			name = Spec;
+			productName = Spec;
+			productReference = AE4793211C56AB2600886254 /* Spec.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +170,10 @@
 				TargetAttributes = {
 					AE4792ED1C56A4A800886254 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					AE4793201C56AB2600886254 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = AE4792ED1C56A4A800886254;
 					};
 				};
 			};
@@ -113,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				AE4792ED1C56A4A800886254 /* brighton */,
+				AE4793201C56AB2600886254 /* Spec */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +207,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE47931F1C56AB2600886254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57DD30AFFCE1306AA10D7756 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spec/Pods-Spec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72163A75C20BDACC06239539 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF66569CE051B3C6945BE59E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spec/Pods-Spec-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE4792EA1C56A4A800886254 /* Sources */ = {
@@ -140,7 +274,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE47931D1C56AB2600886254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE4793271C56AB2600886254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE4792ED1C56A4A800886254 /* brighton */;
+			targetProxy = AE4793261C56AB2600886254 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE4792F51C56A4A800886254 /* Main.storyboard */ = {
@@ -265,6 +414,32 @@
 			};
 			name = Release;
 		};
+		AE4793281C56AB2600886254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72EE263C9BB518BEB74A32B2 /* Pods-Spec.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Spec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.Spec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brighton.app/brighton";
+			};
+			name = Debug;
+		};
+		AE4793291C56AB2600886254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Spec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.brighton.Spec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brighton.app/brighton";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +459,16 @@
 				AE4793021C56A4A800886254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE47932A1C56AB2600886254 /* Build configuration list for PBXNativeTarget "Spec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4793281C56AB2600886254 /* Debug */,
+				AE4793291C56AB2600886254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
