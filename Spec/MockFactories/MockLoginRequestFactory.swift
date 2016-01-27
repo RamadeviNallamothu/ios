@@ -1,7 +1,7 @@
 @testable import brighton
 import Foundation
 
-class MockLoginRequestFactory: RequestFactoryProtocol {
+class MockLoginRequestFactory: LoginRequestFactoryProtocol {
     var mockedLoginRequest: NSURLRequest!
 
     func requestForLogin(username username: String, password: String) -> NSURLRequest {

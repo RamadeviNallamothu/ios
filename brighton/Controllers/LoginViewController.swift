@@ -5,7 +5,7 @@ protocol LoginViewControllerDelegate {
 }
 
 class LoginViewController: UIViewController {
-    var requestFactory: RequestFactoryProtocol?
+    var requestFactory: LoginRequestFactoryProtocol?
     var urlSession: URLSessionProtocol?
     var delegate: LoginViewControllerDelegate?
 
@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         self.configure(requestFactory: RequestFactory(), urlSession: NSURLSession.sharedSession(), delegate: delegate)
     }
 
-    func configure(requestFactory requestFactory: RequestFactoryProtocol, urlSession: URLSessionProtocol, delegate: LoginViewControllerDelegate) {
+    func configure(requestFactory requestFactory: LoginRequestFactoryProtocol, urlSession: URLSessionProtocol, delegate: LoginViewControllerDelegate) {
         self.requestFactory = requestFactory
         self.urlSession = urlSession
         self.delegate = delegate
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
                passwordTextField = passwordTextField,
                password = passwordTextField.text
         {
-            let task = urlSession.dataTaskWithRequest(requestFactory.requestForLogin(username: username, password: password)) {
+            urlSession.dataTaskWithRequest(requestFactory.requestForLogin(username: username, password: password)) {
                 (data, response, error) -> Void in
                 if let response = response,
                        delegate = self.delegate
@@ -42,8 +42,7 @@ class LoginViewController: UIViewController {
                         delegate.loginViewControllerLoginSuccessful()
                     }
                 }
-            }
-            task.resume()
+            }.resume()
         }
     }
 

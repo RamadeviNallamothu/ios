@@ -1,6 +1,6 @@
 import Foundation
 
-class RequestFactory: RequestFactoryProtocol, AccountsRequestFactoryProtocol {
+class RequestFactory: LoginRequestFactoryProtocol, AccountsRequestFactoryProtocol {
     let baseURL = NSBundle.mainBundle().objectForInfoDictionaryKey("BASE_URL") as! String
 
     func requestForLogin(username username: String, password: String) -> NSURLRequest {

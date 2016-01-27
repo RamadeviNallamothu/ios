@@ -20,11 +20,12 @@
 		AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE901C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift */; };
 		AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE921C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift */; };
 		AEDFDE961C591F6F006BCD66 /* AccountSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */; };
+		AEDFDE981C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE971C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift */; };
+		AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE991C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
 		AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */; };
-		AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */; };
 		AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */; };
 		AEFE5FD41C56D56300814E5C /* MockLoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */; };
 		AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */; };
@@ -64,11 +65,12 @@
 		AEDFDE901C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
 		AEDFDE921C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSessionDataTask+URLSessionDataTaskProtocol.swift"; sourceTree = "<group>"; };
 		AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSpec.swift; sourceTree = "<group>"; };
+		AEDFDE971C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestFactoryProtocol.swift; sourceTree = "<group>"; };
+		AEDFDE991C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsRequestFactoryProtocol.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
 		AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerSpec.swift; path = Controllers/LoginViewControllerSpec.swift; sourceTree = "<group>"; };
-		AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryProtocol.swift; sourceTree = "<group>"; };
 		AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoginRequestFactory.swift; sourceTree = "<group>"; };
 		AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -217,8 +219,9 @@
 		AEFE5FCC1C56D32F00814E5C /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */,
 				AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */,
+				AEDFDE971C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift */,
+				AEDFDE991C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -437,13 +440,14 @@
 				AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */,
 				AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */,
 				AEFE5FE21C58176300814E5C /* AccountsRepositoryProtocol.swift in Sources */,
+				AEDFDE981C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift in Sources */,
 				AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */,
 				AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */,
 				AEFE5FE51C5817D300814E5C /* Account.swift in Sources */,
 				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
 				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
+				AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */,
 				AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
-				AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */,
 				AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */,
 				AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */,
 			);

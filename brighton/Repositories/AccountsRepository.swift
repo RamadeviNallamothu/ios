@@ -17,8 +17,7 @@ class AccountsRepository: AccountsRepositoryProtocol {
     }
 
     func fetchAccounts(completion: FetchAccountsCompletion) {
-        urlSession.dataTaskWithRequest(requestFactory.requestForAccounts(),
-            completionHandler: {
+        urlSession.dataTaskWithRequest(requestFactory.requestForAccounts()) {
             (data, response, error) -> Void in
                 var accounts: [Account] = []
                 if let data = data {
@@ -39,6 +38,6 @@ class AccountsRepository: AccountsRepositoryProtocol {
                     }
                 }
                 completion(accounts, error)
-        }).resume()
+        }.resume()
     }
 }
