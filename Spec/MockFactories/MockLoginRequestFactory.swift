@@ -1,6 +1,9 @@
 @testable import brighton
 import Foundation
 
+let kTestUsername = "kTestUsername"
+let kTestPassword = "kTestPassword"
+
 class MockLoginRequestFactory: LoginRequestFactoryProtocol {
     var mockedLoginRequest: NSURLRequest!
 

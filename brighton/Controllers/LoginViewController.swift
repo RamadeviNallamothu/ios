@@ -5,8 +5,7 @@ protocol LoginViewControllerDelegate {
 }
 
 class LoginViewController: UIViewController {
-    var requestFactory: LoginRequestFactoryProtocol?
-    var urlSession: URLSessionProtocol?
+    var authenticationRepository: AuthenticationRepositoryProtocol? = AuthenticationRepository()
     var delegate: LoginViewControllerDelegate?
 
     @IBOutlet weak var usernameTextField: UITextField?
@@ -14,35 +13,30 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton?
 
     func configure(delegate: LoginViewControllerDelegate) {
-        self.configure(requestFactory: RequestFactory(), urlSession: NSURLSession.sharedSession(), delegate: delegate)
+        self.configure(authenticationRepository: AuthenticationRepository(), delegate: delegate)
     }
 
-    func configure(requestFactory requestFactory: LoginRequestFactoryProtocol, urlSession: URLSessionProtocol, delegate: LoginViewControllerDelegate) {
-        self.requestFactory = requestFactory
-        self.urlSession = urlSession
+    func configure(authenticationRepository authenticationRepository: AuthenticationRepositoryProtocol, delegate: LoginViewControllerDelegate) {
+        self.authenticationRepository = authenticationRepository
         self.delegate = delegate
     }
 
     @IBAction
     func submitButtonTapped() {
-        if let requestFactory = requestFactory,
-               urlSession = urlSession,
+        if let authenticationRepository = authenticationRepository,
                usernameTextField = usernameTextField,
                username = usernameTextField.text,
                passwordTextField = passwordTextField,
                password = passwordTextField.text
         {
-            urlSession.dataTaskWithRequest(requestFactory.requestForLogin(username: username, password: password)) {
-                (data, response, error) -> Void in
-                if let response = response,
-                       delegate = self.delegate
-                {
-                    let httpResponse = response as! NSHTTPURLResponse
-                    if (httpResponse.statusCode == 200) {
-                        delegate.loginViewControllerLoginSuccessful()
-                    }
+            authenticationRepository.login(username: username, password: password) {
+                (error) -> Void in
+                if let error = error {
+                    print(error)
+                } else if let delegate = self.delegate {
+                    delegate.loginViewControllerLoginSuccessful()
                 }
-            }.resume()
+            }
         }
     }
 

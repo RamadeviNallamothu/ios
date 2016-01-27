@@ -8,9 +8,6 @@ extension UIControl {
     }
 }
 
-let kTestUsername = "my username"
-let kTestPassword = "my password"
-
 class MockLoginViewControllerDelegate: LoginViewControllerDelegate {
     var loginViewControllerLoginSuccessfulWasCalled: Bool = false
 
@@ -19,18 +16,16 @@ class MockLoginViewControllerDelegate: LoginViewControllerDelegate {
     }
 }
 
-
 class LoginViewControllerSpec: QuickSpec {
     override func spec() {
         var controller : LoginViewController!
-        let requestFactory = MockLoginRequestFactory()
-        let urlSession = MockURLSession()
+        let authenticationRepository = MockAuthenticationRepository()
         let delegate = MockLoginViewControllerDelegate()
 
         beforeEach() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             controller = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
-            controller.configure(requestFactory: requestFactory, urlSession: urlSession, delegate: delegate)
+            controller.configure(authenticationRepository: authenticationRepository, delegate: delegate)
             if let window = UIApplication.sharedApplication().delegate?.window {
                 window!.rootViewController = controller
                 NSRunLoop.mainRunLoop().runUntilDate(NSDate())
@@ -52,12 +47,8 @@ class LoginViewControllerSpec: QuickSpec {
         }
 
         describe("when the 'Log In' button is tapped") {
-            let mockURLSessionDataTask = MockURLSessionDataTask()
 
             beforeEach() {
-                requestFactory.mockedLoginRequest = NSURLRequest()
-                urlSession.mockURLSessionDataTask = mockURLSessionDataTask
-
                 if let usernameTextField = controller.usernameTextField,
                        passwordTextField = controller.passwordTextField
                 {
@@ -69,20 +60,15 @@ class LoginViewControllerSpec: QuickSpec {
                 }
             }
 
-            it("makes a request, configured with the username and password, to the log in endpoint") {
-                expect(urlSession.request).to(equal(requestFactory.mockedLoginRequest))
+            it("asks the authentication repository to log in") {
+                expect(authenticationRepository.loginWasCalled).to(beTrue())
             }
 
-            it("calls resume on the task") {
-                expect(mockURLSessionDataTask.resumeWasCalled).to(beTrue())
-            }
-
-            describe("when the request returns") {
+            describe("when login returns") {
                 context("with success") {
                     beforeEach() {
                         delegate.loginViewControllerLoginSuccessfulWasCalled = false
-                        let response = NSHTTPURLResponse(URL: NSURL(string: "http://example.com")!, statusCode: 200, HTTPVersion: nil, headerFields: nil)
-                        urlSession.completion(nil, response, nil)
+                        authenticationRepository.loginCompletion(nil)
                     }
 
                     it("notify the delegate that login was successful") {
@@ -93,8 +79,7 @@ class LoginViewControllerSpec: QuickSpec {
                 context("with error") {
                     beforeEach() {
                         delegate.loginViewControllerLoginSuccessfulWasCalled = false
-                        let response = NSHTTPURLResponse(URL: NSURL(string: "http://example.com")!, statusCode: 401, HTTPVersion: nil, headerFields: nil)
-                        urlSession.completion(nil, response, nil)
+                        authenticationRepository.loginCompletion(NSError(domain: "AuthenticationError", code: 0, userInfo: nil))
                     }
 
                     it("does something that we'll figure out later") {

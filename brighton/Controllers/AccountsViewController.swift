@@ -11,12 +11,12 @@ class AccountsViewController: UIViewController {
     func configure(accountsRepository accountsRepository: AccountsRepositoryProtocol, asyncService: AsyncProtocol) {
         self.accountsRepository = accountsRepository
         self.asyncService = asyncService
-        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+
         self.performSegueWithIdentifier("PresentLoginSceneSegue", sender: nil)
     }
 
@@ -42,7 +42,6 @@ class AccountsViewController: UIViewController {
             })
         }
     }
-
 }
 
 extension AccountsViewController: UITableViewDataSource {
@@ -58,13 +57,17 @@ extension AccountsViewController: UITableViewDataSource {
 extension AccountsViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         let accountCell = cell as! AccountCell
-        let account = self.accounts[indexPath.row]
-        if let nameLabel = accountCell.nameLabel {
+        if let nameLabel = accountCell.nameLabel,
+               balanceLabel = accountCell.balanceLabel
+        {
+            let account = self.accounts[indexPath.row]
             nameLabel.text = account.name
-        }
-        if let balanceLabel = accountCell.balanceLabel {
             balanceLabel.text = currencyFormatter.stringFromNumber(account.balance)
         }
+    }
+
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "My Accounts"
     }
 }
 

@@ -2,16 +2,6 @@ import Quick
 import Nimble
 @testable import brighton
 
-class MockAccountsRepository: AccountsRepositoryProtocol {
-    var fetchAccountsWasCalled: Bool = false
-    var fetchAccountsCompletion: FetchAccountsCompletion = {(accounts, error) -> Void in }
-
-    func fetchAccounts(completion: FetchAccountsCompletion) {
-        fetchAccountsWasCalled = true
-        fetchAccountsCompletion = completion
-    }
-}
-
 class AccountsViewControllerSpec: QuickSpec {
     override func spec() {
         var controller: AccountsViewController! // declare the object to be tested
