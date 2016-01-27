@@ -12,16 +12,27 @@
 		AE4792F71C56A4A800886254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792F51C56A4A800886254 /* Main.storyboard */; };
 		AE4792F91C56A4A800886254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4792F81C56A4A800886254 /* Assets.xcassets */; };
 		AE4792FC1C56A4A800886254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4792FA1C56A4A800886254 /* LaunchScreen.storyboard */; };
+		AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA61F621C582B8900049519 /* AccountsRepository.swift */; };
+		AEA61F661C582BBE00049519 /* AccountsRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA61F651C582BBE00049519 /* AccountsRepositorySpec.swift */; };
+		AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE891C59100D006BCD66 /* MockURLSessionDataTask.swift */; };
+		AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE8B1C59105F006BCD66 /* MockURLSession.swift */; };
+		AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE8D1C591198006BCD66 /* MockAccountsRequestFactory.swift */; };
+		AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE901C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift */; };
+		AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE921C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift */; };
+		AEDFDE961C591F6F006BCD66 /* AccountSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
 		AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */; };
 		AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */; };
 		AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */; };
-		AEFE5FD41C56D56300814E5C /* MockRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */; };
+		AEFE5FD41C56D56300814E5C /* MockLoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */; };
 		AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */; };
 		AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FD81C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift */; };
 		AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */; };
+		AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FDE1C58124600814E5C /* AccountCell.swift */; };
+		AEFE5FE21C58176300814E5C /* AccountsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FE11C58176300814E5C /* AccountsRepositoryProtocol.swift */; };
+		AEFE5FE51C5817D300814E5C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FE41C5817D300814E5C /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +56,27 @@
 		AE4792FD1C56A4A800886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE4793211C56AB2600886254 /* Spec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4793251C56AB2600886254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA61F621C582B8900049519 /* AccountsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsRepository.swift; sourceTree = "<group>"; };
+		AEA61F651C582BBE00049519 /* AccountsRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsRepositorySpec.swift; sourceTree = "<group>"; };
+		AEDFDE891C59100D006BCD66 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		AEDFDE8B1C59105F006BCD66 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		AEDFDE8D1C591198006BCD66 /* MockAccountsRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAccountsRequestFactory.swift; sourceTree = "<group>"; };
+		AEDFDE901C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
+		AEDFDE921C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSessionDataTask+URLSessionDataTaskProtocol.swift"; sourceTree = "<group>"; };
+		AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSpec.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
 		AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerSpec.swift; path = Controllers/LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		AEFE5FCD1C56D36500814E5C /* RequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryProtocol.swift; sourceTree = "<group>"; };
 		AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestFactory.swift; sourceTree = "<group>"; };
+		AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoginRequestFactory.swift; sourceTree = "<group>"; };
 		AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		AEFE5FD81C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactorySpec.swift; sourceTree = "<group>"; };
+		AEFE5FDE1C58124600814E5C /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		AEFE5FE11C58176300814E5C /* AccountsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AEFE5FE41C5817D300814E5C /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C4B65ACF3F1DC08D3FD1F68B /* Pods-Spec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spec.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spec/Pods-Spec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +139,10 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDE8F1C591492006BCD66 /* Extensions */,
+				AEFE5FE31C5817BF00814E5C /* Models */,
+				AEFE5FE01C58174800814E5C /* Repositories */,
+				AEFE5FDD1C58122100814E5C /* Views */,
 				AEFE5FD51C56DB0100814E5C /* Sessions */,
 				AEFE5FCC1C56D32F00814E5C /* Factories */,
 				AEFE5FC31C56B1F600814E5C /* Controllers */,
@@ -132,6 +158,9 @@
 		AE4793221C56AB2600886254 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDE941C591F53006BCD66 /* Models */,
+				AEDFDE881C590FED006BCD66 /* Mocks */,
+				AEA61F641C582B9F00049519 /* Repositories */,
 				AEFE5FDA1C57DED400814E5C /* Factories */,
 				AEFE5FD21C56D52A00814E5C /* Controllers */,
 				AEFE5FD11C56D51600814E5C /* MockFactories */,
@@ -140,6 +169,40 @@
 				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
 			);
 			path = Spec;
+			sourceTree = "<group>";
+		};
+		AEA61F641C582B9F00049519 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AEA61F651C582BBE00049519 /* AccountsRepositorySpec.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AEDFDE881C590FED006BCD66 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDE891C59100D006BCD66 /* MockURLSessionDataTask.swift */,
+				AEDFDE8B1C59105F006BCD66 /* MockURLSession.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AEDFDE8F1C591492006BCD66 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDE901C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift */,
+				AEDFDE921C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AEDFDE941C591F53006BCD66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
@@ -163,7 +226,8 @@
 		AEFE5FD11C56D51600814E5C /* MockFactories */ = {
 			isa = PBXGroup;
 			children = (
-				AEFE5FD31C56D56300814E5C /* MockRequestFactory.swift */,
+				AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */,
+				AEDFDE8D1C591198006BCD66 /* MockAccountsRequestFactory.swift */,
 			);
 			path = MockFactories;
 			sourceTree = "<group>";
@@ -190,6 +254,31 @@
 				AEFE5FDB1C57DEEF00814E5C /* RequestFactorySpec.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		AEFE5FDD1C58122100814E5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FDE1C58124600814E5C /* AccountCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AEFE5FE01C58174800814E5C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FE11C58176300814E5C /* AccountsRepositoryProtocol.swift */,
+				AEA61F621C582B8900049519 /* AccountsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AEFE5FE31C5817BF00814E5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE5FE41C5817D300814E5C /* Account.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,11 +434,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */,
+				AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */,
 				AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */,
+				AEFE5FE21C58176300814E5C /* AccountsRepositoryProtocol.swift in Sources */,
+				AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */,
 				AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */,
+				AEFE5FE51C5817D300814E5C /* Account.swift in Sources */,
 				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
 				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
+				AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				AEFE5FCE1C56D36500814E5C /* RequestFactoryProtocol.swift in Sources */,
+				AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */,
 				AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,8 +453,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDFDE961C591F6F006BCD66 /* AccountSpec.swift in Sources */,
+				AEA61F661C582BBE00049519 /* AccountsRepositorySpec.swift in Sources */,
 				AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */,
-				AEFE5FD41C56D56300814E5C /* MockRequestFactory.swift in Sources */,
+				AEFE5FD41C56D56300814E5C /* MockLoginRequestFactory.swift in Sources */,
+				AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */,
+				AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */,
+				AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */,
 				AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */,
 				AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */,
 			);

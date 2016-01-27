@@ -11,37 +11,6 @@ extension UIControl {
 let kTestUsername = "my username"
 let kTestPassword = "my password"
 
-class MockRequestFactory: RequestFactoryProtocol {
-    var mockedLoginRequest: NSURLRequest!
-    
-    func requestForLogin(username username: String, password: String) -> NSURLRequest {
-        if (username == kTestUsername && password == kTestPassword) {
-            return mockedLoginRequest
-        }
-        return NSURLRequest(URL: NSURL(string: "http://example.com")!)
-    }
-}
-
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    var resumeWasCalled: Bool = false
-
-    func resume() {
-        resumeWasCalled = true
-    }
-}
-
-class MockURLSession: URLSessionProtocol {
-    var loginRequest: NSURLRequest!
-    var mockURLSessionDataTask: URLSessionDataTaskProtocol!
-    var loginCompletion: DataTaskResult = {(data, response, error) -> Void in }
-
-    func dataTaskWithRequest(request: NSURLRequest, completionHandler: DataTaskResult) -> URLSessionDataTaskProtocol {
-        self.loginRequest = request
-        self.loginCompletion = completionHandler
-        return mockURLSessionDataTask
-    }
-}
-
 class MockLoginViewControllerDelegate: LoginViewControllerDelegate {
     var loginViewControllerLoginSuccessfulWasCalled: Bool = false
 
@@ -54,7 +23,7 @@ class MockLoginViewControllerDelegate: LoginViewControllerDelegate {
 class LoginViewControllerSpec: QuickSpec {
     override func spec() {
         var controller : LoginViewController!
-        let requestFactory = MockRequestFactory()
+        let requestFactory = MockLoginRequestFactory()
         let urlSession = MockURLSession()
         let delegate = MockLoginViewControllerDelegate()
 
@@ -101,7 +70,7 @@ class LoginViewControllerSpec: QuickSpec {
             }
 
             it("makes a request, configured with the username and password, to the log in endpoint") {
-                expect(urlSession.loginRequest).to(equal(requestFactory.mockedLoginRequest))
+                expect(urlSession.request).to(equal(requestFactory.mockedLoginRequest))
             }
 
             it("calls resume on the task") {
@@ -113,7 +82,7 @@ class LoginViewControllerSpec: QuickSpec {
                     beforeEach() {
                         delegate.loginViewControllerLoginSuccessfulWasCalled = false
                         let response = NSHTTPURLResponse(URL: NSURL(string: "http://example.com")!, statusCode: 200, HTTPVersion: nil, headerFields: nil)
-                        urlSession.loginCompletion(nil, response, nil)
+                        urlSession.completion(nil, response, nil)
                     }
 
                     it("notify the delegate that login was successful") {
@@ -125,7 +94,7 @@ class LoginViewControllerSpec: QuickSpec {
                     beforeEach() {
                         delegate.loginViewControllerLoginSuccessfulWasCalled = false
                         let response = NSHTTPURLResponse(URL: NSURL(string: "http://example.com")!, statusCode: 401, HTTPVersion: nil, headerFields: nil)
-                        urlSession.loginCompletion(nil, response, nil)
+                        urlSession.completion(nil, response, nil)
                     }
 
                     it("does something that we'll figure out later") {
