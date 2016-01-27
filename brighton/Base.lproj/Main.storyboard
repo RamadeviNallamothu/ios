@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="2141" y="-289"/>
         </scene>
-        <!--Accounts View Controller-->
+        <!--Brighton Beach Bank-->
         <scene sceneID="e6r-FA-HzA">
             <objects>
                 <viewController storyboardIdentifier="AccountsViewController" id="wSg-33-ULJ" customClass="AccountsViewController" customModule="brighton" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                             <constraint firstItem="xyK-9b-2c8" firstAttribute="leading" secondItem="daS-fS-p84" secondAttribute="leading" id="yOa-pv-NsR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lCY-xn-yRJ"/>
+                    <navigationItem key="navigationItem" title="Brighton Beach Bank" id="lCY-xn-yRJ"/>
                     <connections>
                         <outlet property="tableView" destination="xyK-9b-2c8" id="hCV-EF-ywq"/>
                         <segue destination="4MM-Ra-gUa" kind="presentation" identifier="PresentLoginSceneSegue" id="TTZ-sy-ThV"/>

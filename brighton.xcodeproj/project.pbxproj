@@ -37,6 +37,8 @@
 		AEDFDEBA1C59609F006BCD66 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEB91C59609F006BCD66 /* HTTPClient.swift */; };
 		AEDFDEBC1C5961E7006BCD66 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */; };
 		AEDFDEBE1C5962F0006BCD66 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */; };
+		AEDFDEC11C596FC5006BCD66 /* AccountSerializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC01C596FC5006BCD66 /* AccountSerializerProtocol.swift */; };
+		AEDFDEC31C59703D006BCD66 /* AccountSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC21C59703D006BCD66 /* AccountSerializer.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
@@ -97,6 +99,8 @@
 		AEDFDEB91C59609F006BCD66 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
+		AEDFDEC01C596FC5006BCD66 /* AccountSerializerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSerializerProtocol.swift; sourceTree = "<group>"; };
+		AEDFDEC21C59703D006BCD66 /* AccountSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSerializer.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDEBF1C596F9B006BCD66 /* Serializers */,
 				AEDFDEB51C595FB7006BCD66 /* Networking */,
 				AEDFDE9B1C594463006BCD66 /* Services */,
 				AEDFDE8F1C591492006BCD66 /* Extensions */,
@@ -286,6 +291,15 @@
 				AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		AEDFDEBF1C596F9B006BCD66 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDEC01C596FC5006BCD66 /* AccountSerializerProtocol.swift */,
+				AEDFDEC21C59703D006BCD66 /* AccountSerializer.swift */,
+			);
+			path = Serializers;
 			sourceTree = "<group>";
 		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
@@ -523,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDFDEC11C596FC5006BCD66 /* AccountSerializerProtocol.swift in Sources */,
 				AEDFDEB81C596030006BCD66 /* HTTPClientProtocol.swift in Sources */,
 				AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */,
 				AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */,
@@ -539,6 +554,7 @@
 				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
 				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
 				AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */,
+				AEDFDEC31C59703D006BCD66 /* AccountSerializer.swift in Sources */,
 				AEDFDE9F1C5944D0006BCD66 /* AsyncService.swift in Sources */,
 				AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */,

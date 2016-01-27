@@ -62,14 +62,7 @@ class AccountsRepositorySpec: QuickSpec {
 
                 context("with error") {
                     beforeEach() {
-                        let accountsDictionary =  []
-                        var data : NSData?
-
-                        do {
-                             data = try NSJSONSerialization.dataWithJSONObject(accountsDictionary, options: NSJSONWritingOptions())
-                            httpClient.performCompletion(data, nil, NSError(domain: "FetchAccountError", code: 0, userInfo: nil))
-                        } catch {
-                        }
+                        httpClient.performCompletion(nil, nil, NSError(domain: "FetchAccountError", code: 0, userInfo: nil))
                     }
 
                     it("calls its callback") {
