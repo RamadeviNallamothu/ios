@@ -49,16 +49,8 @@ class AccountsRepositorySpec: QuickSpec {
                     let account1 = Account(name: "account 1", type: "type 1", balance: 234.56)
 
                     beforeEach() {
-                        let accountsDictionary = [ "accounts": [
-                                ["name": account0.name, "type": account0.type, "balance": account0.balance],
-                                ["name": account1.name, "type": account1.type, "balance": account1.balance],
-                            ]
-                        ]
-                        do {
-                            let data = try NSJSONSerialization.dataWithJSONObject(accountsDictionary, options: NSJSONWritingOptions())
-                            urlSession.completion(data, nil, nil)
-                        } catch {
-                        }
+                        let data = fixtureData("accounts.200.json")
+                        urlSession.completion(data, nil, nil)
                     }
 
                     it("calls its callback") {

@@ -30,6 +30,9 @@
 		AEDFDEA81C594ECA006BCD66 /* AuthenticationRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEA71C594ECA006BCD66 /* AuthenticationRepositorySpec.swift */; };
 		AEDFDEAA1C59521A006BCD66 /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEA91C59521A006BCD66 /* MockAuthenticationRepository.swift */; };
 		AEDFDEAC1C595244006BCD66 /* MockAccountsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEAB1C595244006BCD66 /* MockAccountsRepository.swift */; };
+		AEDFDEAF1C5959EE006BCD66 /* accounts.200.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDFDEAE1C5959EE006BCD66 /* accounts.200.json */; };
+		AEDFDEB11C5959FB006BCD66 /* login.200.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDFDEB01C5959FB006BCD66 /* login.200.json */; };
+		AEDFDEB41C595F1F006BCD66 /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
@@ -83,6 +86,9 @@
 		AEDFDEA71C594ECA006BCD66 /* AuthenticationRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositorySpec.swift; sourceTree = "<group>"; };
 		AEDFDEA91C59521A006BCD66 /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		AEDFDEAB1C595244006BCD66 /* MockAccountsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAccountsRepository.swift; sourceTree = "<group>"; };
+		AEDFDEAE1C5959EE006BCD66 /* accounts.200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.200.json; sourceTree = "<group>"; };
+		AEDFDEB01C5959FB006BCD66 /* login.200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.200.json; sourceTree = "<group>"; };
+		AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecHelper.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		AE4793221C56AB2600886254 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDEAD1C59599B006BCD66 /* Fixtures */,
 				AEDFDEA01C5945A3006BCD66 /* Services */,
 				AEDFDE941C591F53006BCD66 /* Models */,
 				AEDFDE881C590FED006BCD66 /* Mocks */,
@@ -187,6 +194,7 @@
 				AE4793251C56AB2600886254 /* Info.plist */,
 				AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */,
 				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
+				AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -243,6 +251,15 @@
 				AEDFDEA11C5945CA006BCD66 /* SyncService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AEDFDEAD1C59599B006BCD66 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDEAE1C5959EE006BCD66 /* accounts.200.json */,
+				AEDFDEB01C5959FB006BCD66 /* login.200.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
@@ -418,6 +435,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDFDEAF1C5959EE006BCD66 /* accounts.200.json in Resources */,
+				AEDFDEB11C5959FB006BCD66 /* login.200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +530,7 @@
 				AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */,
 				AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */,
 				AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */,
+				AEDFDEB41C595F1F006BCD66 /* SpecHelper.swift in Sources */,
 				AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */,
 				AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */,
 				AEDFDEAA1C59521A006BCD66 /* MockAuthenticationRepository.swift in Sources */,
