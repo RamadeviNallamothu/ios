@@ -91,8 +91,8 @@
 		AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecHelper.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
-		AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerSpec.swift; path = Controllers/LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		AEFE5FCF1C56D4AD00814E5C /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		AEFE5FD31C56D56300814E5C /* MockLoginRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoginRequestFactory.swift; sourceTree = "<group>"; };
 		AEFE5FD61C56DB1B00814E5C /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -192,8 +192,6 @@
 				AEFE5FD21C56D52A00814E5C /* Controllers */,
 				AEFE5FD11C56D51600814E5C /* MockFactories */,
 				AE4793251C56AB2600886254 /* Info.plist */,
-				AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */,
-				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
 				AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */,
 			);
 			path = Spec;
@@ -293,6 +291,8 @@
 		AEFE5FD21C56D52A00814E5C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */,
+				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
