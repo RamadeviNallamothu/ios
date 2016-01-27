@@ -33,6 +33,10 @@
 		AEDFDEAF1C5959EE006BCD66 /* accounts.200.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDFDEAE1C5959EE006BCD66 /* accounts.200.json */; };
 		AEDFDEB11C5959FB006BCD66 /* login.200.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDFDEB01C5959FB006BCD66 /* login.200.json */; };
 		AEDFDEB41C595F1F006BCD66 /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */; };
+		AEDFDEB81C596030006BCD66 /* HTTPClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEB71C596030006BCD66 /* HTTPClientProtocol.swift */; };
+		AEDFDEBA1C59609F006BCD66 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEB91C59609F006BCD66 /* HTTPClient.swift */; };
+		AEDFDEBC1C5961E7006BCD66 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */; };
+		AEDFDEBE1C5962F0006BCD66 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
@@ -89,6 +93,10 @@
 		AEDFDEAE1C5959EE006BCD66 /* accounts.200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.200.json; sourceTree = "<group>"; };
 		AEDFDEB01C5959FB006BCD66 /* login.200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.200.json; sourceTree = "<group>"; };
 		AEDFDEB31C595F1F006BCD66 /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecHelper.swift; sourceTree = "<group>"; };
+		AEDFDEB71C596030006BCD66 /* HTTPClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientProtocol.swift; sourceTree = "<group>"; };
+		AEDFDEB91C59609F006BCD66 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDEB51C595FB7006BCD66 /* Networking */,
 				AEDFDE9B1C594463006BCD66 /* Services */,
 				AEDFDE8F1C591492006BCD66 /* Extensions */,
 				AEFE5FE31C5817BF00814E5C /* Models */,
@@ -183,6 +192,7 @@
 		AE4793221C56AB2600886254 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDEB61C595FCA006BCD66 /* Networking */,
 				AEDFDEAD1C59599B006BCD66 /* Fixtures */,
 				AEDFDEA01C5945A3006BCD66 /* Services */,
 				AEDFDE941C591F53006BCD66 /* Models */,
@@ -213,6 +223,7 @@
 				AEDFDE8B1C59105F006BCD66 /* MockURLSession.swift */,
 				AEDFDEA91C59521A006BCD66 /* MockAuthenticationRepository.swift */,
 				AEDFDEAB1C595244006BCD66 /* MockAccountsRepository.swift */,
+				AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -258,6 +269,23 @@
 				AEDFDEB01C5959FB006BCD66 /* login.200.json */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		AEDFDEB51C595FB7006BCD66 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDEB71C596030006BCD66 /* HTTPClientProtocol.swift */,
+				AEDFDEB91C59609F006BCD66 /* HTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AEDFDEB61C595FCA006BCD66 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
@@ -495,11 +523,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDFDEB81C596030006BCD66 /* HTTPClientProtocol.swift in Sources */,
 				AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */,
 				AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */,
 				AEFE5FD01C56D4AD00814E5C /* RequestFactory.swift in Sources */,
 				AEDFDEA61C594C83006BCD66 /* AuthenticationRepository.swift in Sources */,
 				AEFE5FE21C58176300814E5C /* AccountsRepositoryProtocol.swift in Sources */,
+				AEDFDEBA1C59609F006BCD66 /* HTTPClient.swift in Sources */,
 				AEDFDE981C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift in Sources */,
 				AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */,
 				AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */,
@@ -528,6 +558,8 @@
 				AEDFDEAC1C595244006BCD66 /* MockAccountsRepository.swift in Sources */,
 				AEDFDEA21C5945CA006BCD66 /* SyncService.swift in Sources */,
 				AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */,
+				AEDFDEBC1C5961E7006BCD66 /* MockHTTPClient.swift in Sources */,
+				AEDFDEBE1C5962F0006BCD66 /* HTTPClientSpec.swift in Sources */,
 				AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */,
 				AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */,
 				AEDFDEB41C595F1F006BCD66 /* SpecHelper.swift in Sources */,

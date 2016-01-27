@@ -2,28 +2,27 @@ import Foundation
 
 class AuthenticationRepository: AuthenticationRepositoryProtocol {
     let requestFactory: LoginRequestFactoryProtocol
-    let urlSession: URLSessionProtocol
+    let httpClient: HTTPClientProtocol
 
     convenience init() {
-        self.init(requestFactory: RequestFactory(), urlSession: NSURLSession.sharedSession())
+        self.init(requestFactory: RequestFactory(), httpClient: HTTPClient())
     }
 
-    init(requestFactory: LoginRequestFactoryProtocol, urlSession: URLSessionProtocol) {
+    init(requestFactory: LoginRequestFactoryProtocol, httpClient: HTTPClientProtocol) {
         self.requestFactory = requestFactory
-        self.urlSession = urlSession
+        self.httpClient = httpClient
     }
 
     func login(username username: String, password: String, completion: LoginCompletion) {
-        urlSession.dataTaskWithRequest(requestFactory.requestForLogin(username: username, password: password)) {
+        httpClient.perform(request: requestFactory.requestForLogin(username: username, password: password)) {
             (data, response, error) -> Void in
             if let response = response {
                 var error: NSError? = nil
-                let httpResponse = response as! NSHTTPURLResponse
-                if (httpResponse.statusCode == 401) {
+                if (response.statusCode == 401) {
                     error = NSError(domain: "AuthenticationError", code: 0, userInfo: nil)
                 }
                 completion(error)
             }
-        }.resume()
+        }
     }
 }

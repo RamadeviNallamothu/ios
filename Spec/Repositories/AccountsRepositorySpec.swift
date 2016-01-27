@@ -8,15 +8,13 @@ class AccountsRepositorySpec: QuickSpec {
 
         // create mock dependencies of each of AccountRepository's dependencies
         let requestFactory = MockAccountsRequestFactory()
-        let urlSession = MockURLSession()
-        let task = MockURLSessionDataTask()
+        let httpClient = MockHTTPClient()
 
         var accountsRepository: AccountsRepository!
 
         beforeEach(){
-            urlSession.mockURLSessionDataTask = task
             // inject the mock dependencies into AccountsRepository, so that it uses our mocks instead of live objects
-            accountsRepository = AccountsRepository(requestFactory: requestFactory, urlSession: urlSession) // Dependency Injection
+            accountsRepository = AccountsRepository(requestFactory: requestFactory, httpClient: httpClient) // Dependency Injection
         }
 
         describe("fetching accounts") {
@@ -35,12 +33,8 @@ class AccountsRepositorySpec: QuickSpec {
                 })
             }
 
-            it("makes a fetch-accounts request") {
-                expect(urlSession.request).to(equal(requestFactory.mockedFetchAccountsRequest))
-            }
-
-            it("calls resume on the returned task") {
-                expect(task.resumeWasCalled).to(beTrue())
+            it("asks the http client to perform the fetch-accounts request") {
+                expect(httpClient.performRequest).to(equal(requestFactory.mockedFetchAccountsRequest))
             }
 
             describe("when the request returns") {
@@ -50,7 +44,7 @@ class AccountsRepositorySpec: QuickSpec {
 
                     beforeEach() {
                         let data = fixtureData("accounts.200.json")
-                        urlSession.completion(data, nil, nil)
+                        httpClient.performCompletion(data, nil, nil)
                     }
 
                     it("calls its callback") {
@@ -73,7 +67,7 @@ class AccountsRepositorySpec: QuickSpec {
 
                         do {
                              data = try NSJSONSerialization.dataWithJSONObject(accountsDictionary, options: NSJSONWritingOptions())
-                            urlSession.completion(data, nil, NSError(domain: "FetchAccountError", code: 0, userInfo: nil))
+                            httpClient.performCompletion(data, nil, NSError(domain: "FetchAccountError", code: 0, userInfo: nil))
                         } catch {
                         }
                     }
