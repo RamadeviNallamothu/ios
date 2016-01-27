@@ -22,6 +22,9 @@
 		AEDFDE961C591F6F006BCD66 /* AccountSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */; };
 		AEDFDE981C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE971C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift */; };
 		AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE991C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift */; };
+		AEDFDE9D1C59447F006BCD66 /* AsyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE9C1C59447F006BCD66 /* AsyncProtocol.swift */; };
+		AEDFDE9F1C5944D0006BCD66 /* AsyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDE9E1C5944D0006BCD66 /* AsyncService.swift */; };
+		AEDFDEA21C5945CA006BCD66 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEA11C5945CA006BCD66 /* SyncService.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
@@ -67,6 +70,9 @@
 		AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSpec.swift; sourceTree = "<group>"; };
 		AEDFDE971C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestFactoryProtocol.swift; sourceTree = "<group>"; };
 		AEDFDE991C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsRequestFactoryProtocol.swift; sourceTree = "<group>"; };
+		AEDFDE9C1C59447F006BCD66 /* AsyncProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncProtocol.swift; sourceTree = "<group>"; };
+		AEDFDE9E1C5944D0006BCD66 /* AsyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncService.swift; sourceTree = "<group>"; };
+		AEDFDEA11C5945CA006BCD66 /* SyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewControllerSpec.swift; path = Controllers/AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDE9B1C594463006BCD66 /* Services */,
 				AEDFDE8F1C591492006BCD66 /* Extensions */,
 				AEFE5FE31C5817BF00814E5C /* Models */,
 				AEFE5FE01C58174800814E5C /* Repositories */,
@@ -160,6 +167,7 @@
 		AE4793221C56AB2600886254 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDEA01C5945A3006BCD66 /* Services */,
 				AEDFDE941C591F53006BCD66 /* Models */,
 				AEDFDE881C590FED006BCD66 /* Mocks */,
 				AEA61F641C582B9F00049519 /* Repositories */,
@@ -205,6 +213,23 @@
 				AEDFDE951C591F6F006BCD66 /* AccountSpec.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AEDFDE9B1C594463006BCD66 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDE9C1C59447F006BCD66 /* AsyncProtocol.swift */,
+				AEDFDE9E1C5944D0006BCD66 /* AsyncService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AEDFDEA01C5945A3006BCD66 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDEA11C5945CA006BCD66 /* SyncService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
@@ -443,10 +468,12 @@
 				AEDFDE981C593BB2006BCD66 /* LoginRequestFactoryProtocol.swift in Sources */,
 				AEDFDE911C5914B5006BCD66 /* NSURLSession+URLSessionProtocol.swift in Sources */,
 				AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */,
+				AEDFDE9D1C59447F006BCD66 /* AsyncProtocol.swift in Sources */,
 				AEFE5FE51C5817D300814E5C /* Account.swift in Sources */,
 				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
 				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
 				AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */,
+				AEDFDE9F1C5944D0006BCD66 /* AsyncService.swift in Sources */,
 				AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */,
 				AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */,
@@ -461,6 +488,7 @@
 				AEA61F661C582BBE00049519 /* AccountsRepositorySpec.swift in Sources */,
 				AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */,
 				AEFE5FD41C56D56300814E5C /* MockLoginRequestFactory.swift in Sources */,
+				AEDFDEA21C5945CA006BCD66 /* SyncService.swift in Sources */,
 				AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */,
 				AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */,
 				AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */,

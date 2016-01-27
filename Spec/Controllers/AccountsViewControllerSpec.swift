@@ -16,11 +16,12 @@ class AccountsViewControllerSpec: QuickSpec {
     override func spec() {
         var controller: AccountsViewController! // declare the object to be tested
         let accountsRepository = MockAccountsRepository()
+        let asyncService = SyncService()
 
         beforeEach() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             controller = storyboard.instantiateViewControllerWithIdentifier("AccountsViewController") as! AccountsViewController // instantiate the object to be tested
-            controller.configure(accountsRepository: accountsRepository) // if it's a view controller, configure the object to be tested
+            controller.configure(accountsRepository: accountsRepository, asyncService: asyncService) // if it's a view controller, configure the object to be tested
             let navController = UINavigationController(rootViewController: controller)
             if let window = UIApplication.sharedApplication().delegate?.window {
                 window!.rootViewController = navController

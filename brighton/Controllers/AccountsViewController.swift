@@ -1,18 +1,16 @@
 import UIKit
 
 class AccountsViewController: UIViewController {
-    var accountsRepository: AccountsRepositoryProtocol?
+    var accountsRepository: AccountsRepositoryProtocol? = AccountsRepository()
+    var asyncService: AsyncProtocol? = AsyncService()
     var accounts: [Account] = []
     let currencyFormatter = NSNumberFormatter()
 
     @IBOutlet weak var tableView: UITableView?
 
-    func configure() {
-        configure(accountsRepository: AccountsRepository())
-    }
-
-    func configure(accountsRepository accountsRepository: AccountsRepositoryProtocol) {
+    func configure(accountsRepository accountsRepository: AccountsRepositoryProtocol, asyncService: AsyncProtocol) {
         self.accountsRepository = accountsRepository
+        self.asyncService = asyncService
         currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
     }
 
@@ -26,6 +24,22 @@ class AccountsViewController: UIViewController {
         if (segue.identifier == "PresentLoginSceneSegue") {
             let loginViewController = segue.destinationViewController as! LoginViewController
             loginViewController.configure(self)
+        }
+    }
+
+    func fetchAndDisplayAccounts() {
+        if let accountsRepository = self.accountsRepository,
+               asyncService = self.asyncService
+        {
+            accountsRepository.fetchAccounts({
+                (accounts, error) -> Void in
+                asyncService.performOnMainQueue() {
+                    if let tableView = self.tableView {
+                        self.accounts = accounts
+                        tableView.reloadData()
+                    }
+                }
+            })
         }
     }
 
@@ -57,14 +71,6 @@ extension AccountsViewController: UITableViewDelegate {
 extension AccountsViewController: LoginViewControllerDelegate {
     func loginViewControllerLoginSuccessful() {
         self.dismissViewControllerAnimated(true) {}
-        if let accountsRepository = self.accountsRepository {
-            accountsRepository.fetchAccounts({
-                (accounts, error) -> Void in
-                if let tableView = self.tableView {
-                    self.accounts = accounts
-                    tableView.reloadData()
-                }
-            })
-        }
+        self.fetchAndDisplayAccounts()
     }
 }
