@@ -18,7 +18,7 @@ class AuthenticationRepository: AuthenticationRepositoryProtocol {
             (data, response, error) -> Void in
             if let response = response {
                 var error: NSError? = nil
-                if (response.statusCode == 401) {
+                if (response.statusCode / 100 != 2) {
                     error = NSError(domain: "AuthenticationError", code: 0, userInfo: nil)
                 }
                 completion(error)

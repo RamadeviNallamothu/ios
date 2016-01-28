@@ -4,9 +4,9 @@ class AccountsViewController: UIViewController {
     var accountsRepository: AccountsRepositoryProtocol? = AccountsRepository()
     var asyncService: AsyncProtocol? = AsyncService()
     var accounts: [Account] = []
-    let currencyFormatter = NSNumberFormatter()
+    let accountPresenter = AccountPresenter()
 
-    @IBOutlet weak var tableView: UITableView?
+    @IBOutlet private(set) weak var tableView: UITableView?
 
     func configure(accountsRepository accountsRepository: AccountsRepositoryProtocol, asyncService: AsyncProtocol) {
         self.accountsRepository = accountsRepository
@@ -15,16 +15,33 @@ class AccountsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-
         self.performSegueWithIdentifier("PresentLoginSceneSegue", sender: nil)
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let tableView = self.tableView,
+        indexPath = tableView.indexPathForSelectedRow
+        {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "PresentLoginSceneSegue") {
             let loginViewController = segue.destinationViewController as! LoginViewController
-            loginViewController.configure(self)
-        }
+            loginViewController.configure(delegate: self)
+        } else if (segue.identifier == "ShowAccountDetailsSegue") {
+            let accountDetailsViewController = segue.destinationViewController as! AccountDetailsViewController
+
+            if let tableView = self.tableView,
+                   indexPath = tableView.indexPathForCell(sender as! AccountCell)
+            {
+                let account = self.accounts[indexPath.row]
+                accountDetailsViewController.configure(account)
+            }
+       }
     }
 
     func fetchAndDisplayAccounts() {
@@ -61,8 +78,8 @@ extension AccountsViewController: UITableViewDelegate {
                balanceLabel = accountCell.balanceLabel
         {
             let account = self.accounts[indexPath.row]
-            nameLabel.text = account.name
-            balanceLabel.text = currencyFormatter.stringFromNumber(account.balance)
+            nameLabel.text = accountPresenter.formattedName(account)
+            balanceLabel.text = accountPresenter.formmattedBalance(account)
         }
     }
 

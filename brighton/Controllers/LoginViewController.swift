@@ -8,11 +8,11 @@ class LoginViewController: UIViewController {
     var authenticationRepository: AuthenticationRepositoryProtocol? = AuthenticationRepository()
     var delegate: LoginViewControllerDelegate?
 
-    @IBOutlet weak var usernameTextField: UITextField?
-    @IBOutlet weak var passwordTextField: UITextField?
-    @IBOutlet weak var submitButton: UIButton?
+    @IBOutlet private(set) weak var usernameTextField: UITextField?
+    @IBOutlet private(set) weak var passwordTextField: UITextField?
+    @IBOutlet private(set) weak var submitButton: UIButton?
 
-    func configure(delegate: LoginViewControllerDelegate) {
+    func configure(delegate delegate: LoginViewControllerDelegate) {
         self.configure(authenticationRepository: AuthenticationRepository(), delegate: delegate)
     }
 
@@ -33,7 +33,8 @@ class LoginViewController: UIViewController {
                 (error) -> Void in
                 if let error = error {
                     print(error)
-                } else if let delegate = self.delegate {
+                } else
+                if let delegate = self.delegate {
                     delegate.loginViewControllerLoginSuccessful()
                 }
             }

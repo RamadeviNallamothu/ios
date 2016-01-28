@@ -39,6 +39,11 @@
 		AEDFDEBE1C5962F0006BCD66 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */; };
 		AEDFDEC11C596FC5006BCD66 /* AccountSerializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC01C596FC5006BCD66 /* AccountSerializerProtocol.swift */; };
 		AEDFDEC31C59703D006BCD66 /* AccountSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC21C59703D006BCD66 /* AccountSerializer.swift */; };
+		AEDFDEC71C597977006BCD66 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC61C597977006BCD66 /* AccountDetailsViewController.swift */; };
+		AEDFDEC91C597A1D006BCD66 /* AccountDetailsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDEC81C597A1D006BCD66 /* AccountDetailsViewControllerSpec.swift */; };
+		AEDFDECB1C5A7B06006BCD66 /* AccountDetailsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDECA1C5A7B06006BCD66 /* AccountDetailsRepositoryProtocol.swift */; };
+		AEDFDECD1C5A7C40006BCD66 /* MockAccountDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDECC1C5A7C40006BCD66 /* MockAccountDetailsRepository.swift */; };
+		AEDFDED01C5AA042006BCD66 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFDECF1C5AA042006BCD66 /* AccountPresenter.swift */; };
 		AEFE5FC51C56B21200814E5C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */; };
 		AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */; };
 		AEFE5FC91C56B64B00814E5C /* AccountsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */; };
@@ -101,6 +106,11 @@
 		AEDFDEBD1C5962F0006BCD66 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
 		AEDFDEC01C596FC5006BCD66 /* AccountSerializerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSerializerProtocol.swift; sourceTree = "<group>"; };
 		AEDFDEC21C59703D006BCD66 /* AccountSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSerializer.swift; sourceTree = "<group>"; };
+		AEDFDEC61C597977006BCD66 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		AEDFDEC81C597A1D006BCD66 /* AccountDetailsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEDFDECA1C5A7B06006BCD66 /* AccountDetailsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AEDFDECC1C5A7C40006BCD66 /* MockAccountDetailsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAccountDetailsRepository.swift; sourceTree = "<group>"; };
+		AEDFDECF1C5AA042006BCD66 /* AccountPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 		AE4792F01C56A4A800886254 /* brighton */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFDECE1C5AA02B006BCD66 /* Presenters */,
 				AEDFDEBF1C596F9B006BCD66 /* Serializers */,
 				AEDFDEB51C595FB7006BCD66 /* Networking */,
 				AEDFDE9B1C594463006BCD66 /* Services */,
@@ -229,6 +240,7 @@
 				AEDFDEA91C59521A006BCD66 /* MockAuthenticationRepository.swift */,
 				AEDFDEAB1C595244006BCD66 /* MockAccountsRepository.swift */,
 				AEDFDEBB1C5961E7006BCD66 /* MockHTTPClient.swift */,
+				AEDFDECC1C5A7C40006BCD66 /* MockAccountDetailsRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -302,11 +314,20 @@
 			path = Serializers;
 			sourceTree = "<group>";
 		};
+		AEDFDECE1C5AA02B006BCD66 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFDECF1C5AA042006BCD66 /* AccountPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		AEFE5FC31C56B1F600814E5C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AEFE5FC41C56B21200814E5C /* AccountsViewController.swift */,
 				AEFE5FC61C56B22D00814E5C /* LoginViewController.swift */,
+				AEDFDEC61C597977006BCD66 /* AccountDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +356,7 @@
 			children = (
 				AEFE5FC81C56B64B00814E5C /* AccountsViewControllerSpec.swift */,
 				AEFE5FCA1C56BEC600814E5C /* LoginViewControllerSpec.swift */,
+				AEDFDEC81C597A1D006BCD66 /* AccountDetailsViewControllerSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -369,8 +391,9 @@
 			children = (
 				AEFE5FE11C58176300814E5C /* AccountsRepositoryProtocol.swift */,
 				AEA61F621C582B8900049519 /* AccountsRepository.swift */,
-				AEDFDEA31C594C10006BCD66 /* AuthenticationRepositoryProtocol.swift */,
 				AEDFDEA51C594C83006BCD66 /* AuthenticationRepository.swift */,
+				AEDFDECA1C5A7B06006BCD66 /* AccountDetailsRepositoryProtocol.swift */,
+				AEDFDEA31C594C10006BCD66 /* AuthenticationRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -538,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEDFDEC11C596FC5006BCD66 /* AccountSerializerProtocol.swift in Sources */,
+				AEDFDED01C5AA042006BCD66 /* AccountPresenter.swift in Sources */,
 				AEDFDEB81C596030006BCD66 /* HTTPClientProtocol.swift in Sources */,
 				AEFE5FC71C56B22D00814E5C /* LoginViewController.swift in Sources */,
 				AEFE5FDF1C58124600814E5C /* AccountCell.swift in Sources */,
@@ -553,11 +577,13 @@
 				AEDFDEA41C594C10006BCD66 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				AEFE5FD71C56DB1B00814E5C /* URLSessionProtocol.swift in Sources */,
 				AEFE5FD91C56DF5D00814E5C /* URLSessionDataTaskProtocol.swift in Sources */,
+				AEDFDEC71C597977006BCD66 /* AccountDetailsViewController.swift in Sources */,
 				AEDFDE9A1C593BC5006BCD66 /* AccountsRequestFactoryProtocol.swift in Sources */,
 				AEDFDEC31C59703D006BCD66 /* AccountSerializer.swift in Sources */,
 				AEDFDE9F1C5944D0006BCD66 /* AsyncService.swift in Sources */,
 				AEDFDE931C5914E0006BCD66 /* NSURLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				AEA61F631C582B8900049519 /* AccountsRepository.swift in Sources */,
+				AEDFDECB1C5A7B06006BCD66 /* AccountDetailsRepositoryProtocol.swift in Sources */,
 				AE4792F21C56A4A800886254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,9 +602,11 @@
 				AEDFDE8A1C59100D006BCD66 /* MockURLSessionDataTask.swift in Sources */,
 				AEDFDEBC1C5961E7006BCD66 /* MockHTTPClient.swift in Sources */,
 				AEDFDEBE1C5962F0006BCD66 /* HTTPClientSpec.swift in Sources */,
+				AEDFDEC91C597A1D006BCD66 /* AccountDetailsViewControllerSpec.swift in Sources */,
 				AEDFDE8E1C591198006BCD66 /* MockAccountsRequestFactory.swift in Sources */,
 				AEDFDE8C1C59105F006BCD66 /* MockURLSession.swift in Sources */,
 				AEDFDEB41C595F1F006BCD66 /* SpecHelper.swift in Sources */,
+				AEDFDECD1C5A7C40006BCD66 /* MockAccountDetailsRepository.swift in Sources */,
 				AEFE5FCB1C56BEC600814E5C /* LoginViewControllerSpec.swift in Sources */,
 				AEFE5FDC1C57DEEF00814E5C /* RequestFactorySpec.swift in Sources */,
 				AEDFDEAA1C59521A006BCD66 /* MockAuthenticationRepository.swift in Sources */,

@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 func fixtureData(filename: String) -> NSData? {
     let pathExtension = (filename as NSString).pathExtension
@@ -9,4 +10,14 @@ func fixtureData(filename: String) -> NSData? {
         return NSData(contentsOfURL: fixtureURL)
     }
     return nil
+}
+
+extension UIViewController {
+    func renderInNavController() {
+        let navController = UINavigationController(rootViewController: self)
+        if let window = UIApplication.sharedApplication().delegate?.window {
+            window!.rootViewController = navController
+            NSRunLoop.mainRunLoop().runUntilDate(NSDate())
+        }
+    }
 }

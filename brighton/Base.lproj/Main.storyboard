@@ -128,6 +128,7 @@
                                         <connections>
                                             <outlet property="balanceLabel" destination="0dE-YT-jKq" id="HoO-ex-2xq"/>
                                             <outlet property="nameLabel" destination="D6c-G8-oV4" id="MaX-c3-7u9"/>
+                                            <segue destination="2uR-hq-NXu" kind="show" identifier="ShowAccountDetailsSegue" id="pNL-on-LKk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -171,7 +172,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM6-Y5-In0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344" y="424"/>
+            <point key="canvasLocation" x="1369" y="429"/>
+        </scene>
+        <!--AccountDetailsViewController-->
+        <scene sceneID="htc-qC-iGo">
+            <objects>
+                <viewController storyboardIdentifier="AccountDetailsViewController" title="AccountDetailsViewController" id="2uR-hq-NXu" customClass="AccountDetailsViewController" customModule="brighton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a31-ne-gJg"/>
+                        <viewControllerLayoutGuide type="bottom" id="xEN-vo-0H2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="accountName" id="84T-Ie-lz1" userLabel="c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-p3-TV8">
+                                <rect key="frame" x="515" y="79" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-vb-wJz">
+                                <rect key="frame" x="20" y="84" width="88" height="15"/>
+                                <accessibility key="accessibilityConfiguration" label="dgfgfgf"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JTK-p3-TV8" firstAttribute="baseline" secondItem="RXY-vb-wJz" secondAttribute="baseline" id="4O2-Oh-lhH"/>
+                            <constraint firstItem="RXY-vb-wJz" firstAttribute="top" secondItem="a31-ne-gJg" secondAttribute="bottom" constant="20" id="7VF-N6-1Hz"/>
+                            <constraint firstItem="RXY-vb-wJz" firstAttribute="leading" secondItem="84T-Ie-lz1" secondAttribute="leadingMargin" id="L56-Bp-XCT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JTK-p3-TV8" secondAttribute="trailing" id="aca-Ic-aRM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="balancelabel" destination="JTK-p3-TV8" id="C4w-mu-yIT"/>
+                        <outlet property="nameLabel" destination="RXY-vb-wJz" id="7Ak-cQ-3bD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWr-FW-spz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2141" y="424"/>
         </scene>
     </scenes>
 </document>

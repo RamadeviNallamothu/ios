@@ -2,7 +2,7 @@ import UIKit
 
 class AccountCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel?
-    @IBOutlet weak var balanceLabel: UILabel?
+    @IBOutlet private(set) weak var nameLabel: UILabel?
+    @IBOutlet private(set) weak var balanceLabel: UILabel?
 
 }
